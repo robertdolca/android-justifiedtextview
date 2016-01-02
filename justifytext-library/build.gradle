@@ -17,6 +17,14 @@ android {
     }
 }
 
+apply plugin: 'com.bmuschko.nexus'
+
+nexus {
+  sign = false
+  repositoryUrl = 'http://nexus.squired.ro/content/repositories/releases/'
+  snapshotRepositoryUrl = 'http://nexus.squired.ro/content/repositories/snapshots/'
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
